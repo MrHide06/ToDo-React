@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import '../../App.scss'
 import ListItems from './ListItems'
+import Form from 'react-bootstrap/Form'
 
 export default function FunctionTodo(props) {
     const [todo, setTodo] = useState({
@@ -68,14 +69,14 @@ export default function FunctionTodo(props) {
     
     return (
         <div>
-            
-                <form id="to-do-form" onSubmit={addItem}>
+                <Form className='todoform' onSubmit={addItem}>
                     <input type="text" placeholder="Enter Text" 
                         value={todo.currentItems.text}
                         onChange={handleInput}
+                        className='inputF'
                     />
-                    <button type="submit">Add</button>
-                </form>
+                    <button type="submit" className="buttonF">Add</button>
+                </Form>
             
             {todo.items.map((item, key) => (
                 <ListItems 

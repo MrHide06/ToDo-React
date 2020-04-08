@@ -71,12 +71,13 @@ class ClassTodo extends React.Component{
         return(
             <div>
                 <header>
-                    <Form id="to-do-form" onSubmit={this.addItem}>
+                    <Form className="todoform" onSubmit={this.addItem}>
                         <input type="text" placeholder="Enter Text" 
                             value={this.state.currentItem.text}
                             onChange={this.handleInput}
+                            className="inputC"
                         />
-                        <button type="submit">Add</button>
+                        <button type="submit" className="buttonC">Add</button>
                     </Form>
                 </header>
                 <ListItems items={this.state.items} 

@@ -16,10 +16,10 @@ function App() {
       <div className="App">
       <Header />
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/classTodo">
+        <Route exact path="/classTodo">
           <ClassTodo />
         </Route>
         <Route path="/functionTodo">

@@ -1,82 +1,56 @@
-body{
-    background-image:url(https://c4.wallpaperflare.com/wallpaper/573/824/918/home-minimalism-night-vector-the-city-hd-wallpaper-preview.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
+.navbar{
+    background: transparent;
 }
-
+.homepage{
+    padding-top: 5%;
+    text-align: center;
+    h2{
+        color: black;
+        line-height: 22px;
+        letter-spacing: 1px;
+        font-weight: 200;
+        margin: 0;
+        padding: 0;
+    }
+}
+.container{
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
 .App{
-    background-color: transparent;
-    min-height: 500px auto;
-    width: 400px;
-    margin: 40px auto;
+    background-image: url(./components/images/preview.jpg);
 }
-
-#to-do-form{
-    input{
-        background-color: rgb(27,112,137);
-        border: 0;
-        width: 200px;
-        height: 50px;
-        padding: 0 20px;
-        margin: 20px;
-        font-size: 18px;
-        border-radius: 10px;
-        color: #fff;
-    }
-
-    input::placeholder{
-        color: rgba(255,255,255,0.5);
-    }
-
-    input:focus{
-        outline: none;
-    }
-
-    button:focus{
-        outline: none;
-    }
-
-    button{
-        height: 50px;
-        width: 80px;
-        border-radius: 5px;
-        border: 0;
-        background-color: #bf07ac;
-        cursor: pointer;
-        font-weight: bolder;
-        color: #fff;
-    }
-}
-
-.list{
-    color: #fff;
-    width: 300px;
+.inputF{
     background-color: rgb(27,112,137);
+    border:0;
+    width: 200px;
     height: 50px;
-    margin: 20px auto;
-    border-radius: 5px;
-    p{
-        padding: 10px;
-        position: relative;
-        span{
-            position: absolute;
-            right: 10px;
-            cursor: pointer;
-        }
-        input{
-            background-color: transparent;
-            border: 0;
-            color: #fff;
-            font-size: 18px;
-        }
-        input:focus{
-            outline: none;
-        }
-    }
+    padding: 0 20px;
+    margin: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: #fff;
 }
-
-.faicons{
-    margin: 0 5px;
-    font-size: 15px;
+.navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;;
+}
+.navlink{
+    float:left;
+    .link{
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    .link:hover{
+        background-color: #111;
+    }
 }
