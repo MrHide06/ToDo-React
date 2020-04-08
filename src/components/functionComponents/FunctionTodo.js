@@ -13,6 +13,7 @@ export default function FunctionTodo(props) {
     
     const handleInput = (event)=>{
         setTodo({
+            ...todo,
             currentItems:{
                 text:event.target.value,
                 key:Date.now()
@@ -23,28 +24,32 @@ export default function FunctionTodo(props) {
     const addItem = (event) => {
         event.preventDefault();
         const newItem = todo.currentItems;
-        console.log(newItem);
-        const toItem = todo.items
-            const newItems=[...toItem,newItem];
-            setTodo({
-                items:newItems,
-                    currentItems:{
-                        text:'',
-                        key:''
+        if(newItem.text !==""){
+        const newItems = [...todo.items, newItem];
+        setTodo({
+            items: newItems,
+            currentItems: {
+            text: "",
+            key: "",
                     }
                 }
             )
             console.log(newItems)
-
+        }
         
     }
     
     const deleteItem = (key) => {
         const filteredItems = todo.items.filter(item =>
             item.key!==key);
-        setTodo({
-            items:filteredItems
-        })
+            console.log(filteredItems)
+            setTodo((prevState) => {
+                return({
+                ...prevState,
+                items: filteredItems
+                });
+                }); 
+        
     }
     const setUpdate = (text, key) =>{
         const items = todo.items;
@@ -53,14 +58,17 @@ export default function FunctionTodo(props) {
                 item.text=text;
             }
         })
-        setTodo({
-            items:items
-        })
+        setTodo((prevState) => {
+            return({
+            ...prevState,
+            items: items
+            });
+            }); 
     }
     
     return (
         <div>
-            <header>
+            
                 <form id="to-do-form" onSubmit={addItem}>
                     <input type="text" placeholder="Enter Text" 
                         value={todo.currentItems.text}
@@ -68,11 +76,14 @@ export default function FunctionTodo(props) {
                     />
                     <button type="submit">Add</button>
                 </form>
-            </header>
-                {/* <ListItems items={todo.items} 
+            
+            {todo.items.map((item, key) => (
+                <ListItems 
+                    item={item} 
                     deleteItem={deleteItem}
                     setUpdate={setUpdate}
-                /> */}
+                />
+            ))}
         </div>
     )
 }
