@@ -1,5 +1,6 @@
 body{
     background-image:url(https://c4.wallpaperflare.com/wallpaper/573/824/918/home-minimalism-night-vector-the-city-hd-wallpaper-preview.jpg);
+    background-repeat: no-repeat;
 }
 
 .App{
@@ -39,7 +40,7 @@ body{
         width: 80px;
         border-radius: 5px;
         border: 0;
-        background-color: rgb(202,156,24);
+        background-color: #bf07ac;
         cursor: pointer;
         font-weight: bolder;
         color: #fff;
@@ -49,7 +50,7 @@ body{
 .list{
     color: #fff;
     width: 300px;
-    background-color: #bf07ac;
+    background-color: rgb(27,112,137);
     height: 50px;
     margin: 20px auto;
     border-radius: 5px;
