@@ -72,7 +72,7 @@ class ClassTodo extends React.Component{
             <div>
                 <header>
                     <Form className="todoform" onSubmit={this.addItem}>
-                        <input type="text" placeholder="Enter Text" 
+                        <input type="text" placeholder="Class Todo" 
                             value={this.state.currentItem.text}
                             onChange={this.handleInput}
                             className="inputC"

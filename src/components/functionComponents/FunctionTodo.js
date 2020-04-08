@@ -70,7 +70,7 @@ export default function FunctionTodo(props) {
     return (
         <div>
                 <Form className='todoform' onSubmit={addItem}>
-                    <input type="text" placeholder="Enter Text" 
+                    <input type="text" placeholder="Function Todo" 
                         value={todo.currentItems.text}
                         onChange={handleInput}
                         className='inputF'
