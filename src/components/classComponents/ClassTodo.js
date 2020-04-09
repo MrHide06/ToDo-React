@@ -80,7 +80,7 @@ class ClassTodo extends React.Component{
                                     onChange={this.handleInput}
                                     for="inputSuccess"
                                 />
-                                <Button type="submit" variant="outline-success">Add</Button>
+                                <Button type="submit" variant="info">Add</Button>
                     </Form>
                 
                 <ListItems items={this.state.items} 
