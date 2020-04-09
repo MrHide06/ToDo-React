@@ -70,8 +70,8 @@ class ClassTodo extends React.Component{
     
     render(){
         return(
-            <div>
-                <header>
+            <div className="bodyClass">
+                
                     <Form className="todoformC" onSubmit={this.addItem}>
                                 <input
                                     size="sm"
@@ -82,7 +82,7 @@ class ClassTodo extends React.Component{
                                 />
                                 <Button type="submit" variant="outline-success">Add</Button>
                     </Form>
-                </header>
+                
                 <ListItems items={this.state.items} 
                     deleteItem={this.deleteItem}
                     setUpdate={this.setUpdate}

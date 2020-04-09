@@ -101,15 +101,11 @@ body{
     border-radius: 10px;
     color: #fff;
 }
-.buttonC{
-    height: 50px;
-    width: 80px;
-    border-radius: 5px;
-    border: 0;
-    background-color: #bf12bf;
-    cursor: pointer;
-    font-weight: bolder;
-    color: #fff;
+.bodyClass{
+    background-color: transparent;
+    min-height: 500px auto;
+    width: 400px;
+    margin: 40px auto;
 }
 
 .list{
