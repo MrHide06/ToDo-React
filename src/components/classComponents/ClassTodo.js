@@ -78,7 +78,7 @@ class ClassTodo extends React.Component{
                                     type="text" placeholder="Class Todo" 
                                     value={this.state.currentItem.text}
                                     onChange={this.handleInput}
-                                    className="border border-primary"
+                                    for="inputSuccess"
                                 />
                                 <Button type="submit" variant="outline-success">Add</Button>
                     </Form>

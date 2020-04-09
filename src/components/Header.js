@@ -1,7 +1,7 @@
 import React from 'react'
 import '../App.scss'
 
-import Nav from 'react-bootstrap/Nav';
+import {Nav, Navbar} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Link } from 'react-router-dom'
 
@@ -9,17 +9,17 @@ import { Link } from 'react-router-dom'
 function Header() {
     return (
         <div>
-            <Nav calssName="justify-content-center bg-dark py-3">
-                <Nav.Item className="mr-5">
-                    <Link to="/" clasName="link">Home</Link>
-                </Nav.Item>
-                <Nav.Item className="mr-5">
-                    <Link to="/ClassTodo" clasName="link">ClassTodo</Link>
-                </Nav.Item>    
-                <Nav.Item>
-                    <Link to="/FunctionTodo" clasName="link">FunctionTodo</Link>
-                </Nav.Item>           
-            </Nav>           
+            <Navbar bg="dark" variant="dark">
+                <Navbar.Brand><Link to="/">Home</Link></Navbar.Brand>
+                <Nav className="mr-auto" >
+                    <Nav.Item className="mr-5">
+                        <Link to="/ClassTodo" clasName="link">ClassTodo</Link>
+                    </Nav.Item>    
+                    <Nav.Item>
+                        <Link to="/FunctionTodo" clasName="link">FunctionTodo</Link>
+                    </Nav.Item>           
+                </Nav>           
+            </Navbar>
         </div>
     )
 }
