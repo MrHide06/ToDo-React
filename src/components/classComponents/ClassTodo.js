@@ -1,7 +1,8 @@
 import React from 'react'
 import '../../App.scss'
 import ListItems from '../classComponents/ListItemsClass'
-import Form from 'react-bootstrap/Form'
+import {Form, Col} from 'react-bootstrap'
+import Button from 'react-bootstrap/Button'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
@@ -71,13 +72,15 @@ class ClassTodo extends React.Component{
         return(
             <div>
                 <header>
-                    <Form className="todoform" onSubmit={this.addItem}>
-                        <input type="text" placeholder="Class Todo" 
-                            value={this.state.currentItem.text}
-                            onChange={this.handleInput}
-                            className="inputC"
-                        />
-                        <button type="submit" className="buttonC">Add</button>
+                    <Form className="todoformC" onSubmit={this.addItem}>
+                                <input
+                                    size="sm"
+                                    type="text" placeholder="Class Todo" 
+                                    value={this.state.currentItem.text}
+                                    onChange={this.handleInput}
+                                    className="border border-primary"
+                                />
+                                <Button type="submit" variant="outline-success">Add</Button>
                     </Form>
                 </header>
                 <ListItems items={this.state.items} 

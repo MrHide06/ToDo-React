@@ -19,7 +19,7 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/classTodo">
+        <Route path="/classTodo">
           <ClassTodo />
         </Route>
         <Route path="/functionTodo">

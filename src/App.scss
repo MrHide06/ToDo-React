@@ -21,12 +21,30 @@
     margin-left: auto;
 }
 .App{
+    text-align: center;
+}
+.App-header{
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    
+}
+.App-link{
+    color: #61dafb;
+}
+
+body{
     background-image: url(./components/images/preview.jpg);
 }
 .inputF{
     background-color: rgb(27,112,137);
     border:0;
-    width: 200px;
+    
     height: 50px;
     padding: 0 20px;
     margin: 20px;
@@ -34,36 +52,44 @@
     border-radius: 10px;
     color: #fff;
 }
-.navbar{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;;
+// .navbar{
+//     list-style-type: none;
+//     margin: 0;
+//     padding: 0;
+//     overflow: hidden;
+//     background-color: #333;;
+// }
+// .navlink{
+//     float:left;
+//     .link{
+//         display: block;
+//         color: #fff;
+//         text-align: center;
+//         padding: 14px 16px;
+//         text-decoration: none;
+//     }
+//     .link:hover{
+//         background-color: #111;
+//     }
+// }
+.bodyFunction{
+    background-color: transparent;
+    min-height: 500px auto;
+    width: 400px;
+    margin: 40px auto;
 }
-.navlink{
-    float:left;
-    .link{
-        display: block;
-        color: #fff;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-    .link:hover{
-        background-color: #111;
-    }
-}
-.buttonF{
-    height: 50px;
-    width: 80px;
-    border-radius: 5px;
-    border: 0;
-    background-color: #bf07ac;
-    cursor: pointer;
-    font-weight: bolder;
-    color: #fff;
-}
+// .buttonF{
+//     height: 50px;
+//     width: 80px;
+//     border-radius: 5px;
+//     border: 0;
+//     background-color: #bf07ac;
+//     cursor: pointer;
+//     font-weight: bolder;
+//     color: #fff;
+// }
+//CSS Class Todo
+
 .inputC{
     background-color: rgb(27,114,12);
     border:0;
@@ -84,4 +110,31 @@
     cursor: pointer;
     font-weight: bolder;
     color: #fff;
+}
+
+.list{
+    color: #fff;
+    width: 300px;
+    background-color: rgb(27,112,137);
+    height: 50px;
+    margin: 20px auto;
+    border-radius: 5px;
+    p{
+        padding: 10px;
+        position: relative;
+        span{
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+        }
+        input{
+            background-color: transparent;
+            border: 0;
+            color: #fff;
+            font-size: 18px;
+        }
+        input:focus{
+            outline: none;
+        }
+    }
 }

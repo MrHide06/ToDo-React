@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import '../../App.scss'
 import ListItems from './ListItems'
 import Form from 'react-bootstrap/Form'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Button from 'react-bootstrap/Button'
 
 export default function FunctionTodo(props) {
     const [todo, setTodo] = useState({
@@ -68,14 +70,13 @@ export default function FunctionTodo(props) {
     }
     
     return (
-        <div>
+        <div className="bodyFunction">
                 <Form className='todoform' onSubmit={addItem}>
                     <input type="text" placeholder="Function Todo" 
                         value={todo.currentItems.text}
                         onChange={handleInput}
-                        className='inputF'
-                    />
-                    <button type="submit" className="buttonF">Add</button>
+                        className="border border-primary"/>
+                    <input className="ml-3 rounded bg-primary text-white" type="submit" />
                 </Form>
             
             {todo.items.map((item, key) => (
